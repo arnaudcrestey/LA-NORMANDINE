@@ -1614,6 +1614,195 @@ h3 { font-size: clamp(1.75rem, 2.6vw, 2.7rem); }
 }
 }
 
+/* ========================================
+   HEADER + HERO MOBILE PREMIUM
+   ======================================== */
+
+@media (max-width: 800px) {
+  /* Header plus fin */
+
+  .site-header {
+    height: 4rem;
+    padding: 0 1.1rem;
+  }
+
+  .brand {
+    gap: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .brand-mark {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.46rem;
+  }
+
+  .mobile-menu-trigger {
+    min-height: 2.4rem;
+    gap: 0.7rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.17em;
+  }
+
+  .menu-icon,
+  .menu-icon i {
+    width: 1.55rem;
+  }
+
+  .mobile-navigation {
+    inset: 4rem 0 0;
+  }
+
+  .mobile-navigation-inner {
+    min-height: calc(100svh - 4rem);
+  }
+
+  /* Hero plus compact et éditorial */
+
+  .property-hero {
+    min-height: calc(100svh - 4rem);
+    overflow: hidden;
+  }
+
+  .property-hero-image img {
+    object-position: 53% center;
+  }
+
+  .property-hero-shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(15, 27, 21, 0.08) 0%,
+        rgba(15, 27, 21, 0.14) 28%,
+        rgba(15, 27, 21, 0.7) 72%,
+        rgba(15, 27, 21, 0.9) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(15, 27, 21, 0.28),
+        rgba(15, 27, 21, 0.04)
+      );
+  }
+
+  .property-hero-content {
+    min-height: calc(100svh - 4rem);
+    max-width: none;
+    padding: 7rem 1.25rem 10.5rem;
+    justify-content: flex-end;
+  }
+
+  .property-hero-content .eyebrow {
+    max-width: 20rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.57rem;
+    letter-spacing: 0.22em;
+    line-height: 1.55;
+  }
+
+  .property-hero-content h2 {
+    max-width: 100%;
+    margin-bottom: 1.15rem;
+    font-size: clamp(3.4rem, 14vw, 4.5rem);
+    letter-spacing: -0.055em;
+    line-height: 0.9;
+  }
+
+  .hero-positioning {
+    max-width: 21rem;
+    margin-bottom: 1.8rem;
+    font-size: clamp(1.45rem, 6.4vw, 1.85rem);
+    line-height: 1.18;
+  }
+
+  /* Actions */
+
+  .hero-actions {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-actions .button-ivory {
+    min-height: 3.6rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-actions .button-outline {
+    width: fit-content;
+    min-height: auto;
+    margin-top: 1.1rem;
+    padding: 0 0 0.35rem;
+    justify-content: flex-start;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+  }
+
+  .hero-actions .button-outline::after {
+    content: "→";
+    margin-left: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* Localisation et prix */
+
+  .hero-details {
+    right: 1.25rem;
+    bottom: 1.35rem;
+    left: 1.25rem;
+    display: grid;
+    padding-top: 0.9rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    border-top-color: rgba(255, 255, 255, 0.38);
+  }
+
+  .hero-details p {
+    max-width: none;
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.35;
+  }
+
+  .hero-details p:last-child {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .hero-details span {
+    margin-bottom: 0.25rem;
+    font-size: 0.49rem;
+    letter-spacing: 0.17em;
+  }
+}
+
+@media (max-width: 390px) {
+  .property-hero-content {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+
+  .property-hero-content h2 {
+    font-size: clamp(3.1rem, 13.5vw, 3.75rem);
+  }
+
+  .hero-positioning {
+    font-size: 1.42rem;
+  }
+
+  .hero-details p {
+    font-size: 0.85rem;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
