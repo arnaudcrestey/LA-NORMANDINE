@@ -247,7 +247,7 @@ export default function Home() {
   dans son environnement.
 </h2>
               </div>
-              <p>Une visite des extérieurs pour mieux comprendre l'organisation du domaine, ses espaces <br />et son cadre de vie.</p>
+              <p>Une visite des extérieurs pour mieux comprendre l'organisation du domaine, ses espaces et son cadre de vie.</p>
             </div>
             <div className="video-frame">
               <video controls preload="metadata" playsInline poster="/media/la-normandine-video-poster.jpg">
