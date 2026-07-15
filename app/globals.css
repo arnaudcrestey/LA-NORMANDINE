@@ -1615,11 +1615,11 @@ h3 { font-size: clamp(1.75rem, 2.6vw, 2.7rem); }
 }
 
 /* ========================================
-   HEADER + HERO MOBILE PREMIUM
+   HEADER + HERO MOBILE — ÉDITORIAL PREMIUM
    ======================================== */
 
 @media (max-width: 800px) {
-  /* Header plus fin */
+  /* Header mobile */
 
   .site-header {
     height: 4rem;
@@ -1657,60 +1657,80 @@ h3 { font-size: clamp(1.75rem, 2.6vw, 2.7rem); }
     min-height: calc(100svh - 4rem);
   }
 
-  /* Hero plus compact et éditorial */
+  /* Nouvelle composition du hero */
 
   .property-hero {
-    min-height: calc(100svh - 4rem);
+    min-height: 0;
+    padding-bottom: 0;
     overflow: hidden;
+    color: var(--ink);
+    background: var(--ivory);
+  }
+
+  .property-hero-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 58svh;
+    min-height: 28rem;
+    max-height: 38rem;
+    overflow: hidden;
+    background: var(--forest);
   }
 
   .property-hero-image img {
-    object-position: 53% center;
+    object-position: 56% center;
   }
 
   .property-hero-shade {
     background:
       linear-gradient(
         180deg,
-        rgba(15, 27, 21, 0.08) 0%,
-        rgba(15, 27, 21, 0.14) 28%,
-        rgba(15, 27, 21, 0.7) 72%,
-        rgba(15, 27, 21, 0.9) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(15, 27, 21, 0.28),
-        rgba(15, 27, 21, 0.04)
+        rgba(15, 27, 21, 0.02) 0%,
+        rgba(15, 27, 21, 0.04) 55%,
+        rgba(15, 27, 21, 0.34) 100%
       );
   }
 
+  /* Cartouche éditorial */
+
   .property-hero-content {
-    min-height: calc(100svh - 4rem);
+    position: relative;
+    z-index: 4;
+    min-height: 0;
     max-width: none;
-    padding: 7rem 1.25rem 10.5rem;
-    justify-content: flex-end;
+    margin: -4.25rem 1rem 0;
+    padding: 2rem 1.35rem 1.6rem;
+    justify-content: flex-start;
+    color: var(--ink);
+    background: var(--ivory);
+    box-shadow:
+      0 -1px 0 rgba(255, 255, 255, 0.7),
+      0 18px 45px rgba(32, 35, 31, 0.1);
   }
 
   .property-hero-content .eyebrow {
-    max-width: 20rem;
+    max-width: none;
     margin-bottom: 1.25rem;
-    font-size: 0.57rem;
-    letter-spacing: 0.22em;
-    line-height: 1.55;
+    color: var(--wood);
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
   }
 
   .property-hero-content h2 {
-    max-width: 100%;
-    margin-bottom: 1.15rem;
-    font-size: clamp(3.4rem, 14vw, 4.5rem);
-    letter-spacing: -0.055em;
-    line-height: 0.9;
+    margin-bottom: 1.2rem;
+    color: var(--forest);
+    font-size: clamp(3.35rem, 14vw, 4.4rem);
+    letter-spacing: -0.06em;
+    line-height: 0.88;
   }
 
   .hero-positioning {
-    max-width: 21rem;
+    max-width: 20rem;
     margin-bottom: 1.8rem;
-    font-size: clamp(1.45rem, 6.4vw, 1.85rem);
+    color: rgba(32, 35, 31, 0.78);
+    font-size: clamp(1.4rem, 6vw, 1.75rem);
     line-height: 1.18;
   }
 
@@ -1719,9 +1739,9 @@ h3 { font-size: clamp(1.75rem, 2.6vw, 2.7rem); }
   .hero-actions {
     display: flex;
     width: 100%;
-    align-items: stretch;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 0;
+    gap: 1.1rem;
   }
 
   .hero-actions .button {
@@ -1729,48 +1749,70 @@ h3 { font-size: clamp(1.75rem, 2.6vw, 2.7rem); }
   }
 
   .hero-actions .button-ivory {
-    min-height: 3.6rem;
+    min-height: 3.65rem;
     padding: 0.9rem 1.2rem;
-    font-size: 0.68rem;
+    color: var(--ivory);
+    border-color: var(--forest);
+    background: var(--forest);
+    font-size: 0.65rem;
     letter-spacing: 0.12em;
   }
 
+  .hero-actions .button-ivory:hover {
+    color: var(--ivory);
+    background: var(--ink);
+  }
+
   .hero-actions .button-outline {
-    width: fit-content;
+    position: relative;
+    width: auto;
     min-height: auto;
-    margin-top: 1.1rem;
-    padding: 0 0 0.35rem;
+    padding: 0 2rem 0.35rem 0;
     justify-content: flex-start;
     border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
-    font-size: 0.62rem;
+    border-bottom: 1px solid rgba(36, 55, 45, 0.35);
+    color: var(--forest);
+    font-size: 0.59rem;
     letter-spacing: 0.13em;
   }
 
   .hero-actions .button-outline::after {
+    position: absolute;
+    right: 0;
     content: "→";
-    margin-left: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+
+  .hero-actions .button-outline:hover {
+    color: var(--ink);
+    background: transparent;
+    transform: none;
   }
 
   /* Localisation et prix */
 
   .hero-details {
-    right: 1.25rem;
-    bottom: 1.35rem;
-    left: 1.25rem;
+    position: relative;
+    z-index: 3;
+    right: auto;
+    bottom: auto;
+    left: auto;
     display: grid;
-    padding-top: 0.9rem;
+    margin: 0 1rem;
+    padding: 1.4rem 0 1.7rem;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1rem;
-    border-top-color: rgba(255, 255, 255, 0.38);
+    color: var(--ink);
+    border-top: 1px solid rgba(32, 35, 31, 0.18);
   }
 
   .hero-details p {
     max-width: none;
     margin: 0;
-    font-size: 0.96rem;
-    line-height: 1.35;
+    color: var(--ink);
+    font-size: 0.94rem;
+    line-height: 1.4;
   }
 
   .hero-details p:last-child {
@@ -1779,28 +1821,41 @@ h3 { font-size: clamp(1.75rem, 2.6vw, 2.7rem); }
   }
 
   .hero-details span {
-    margin-bottom: 0.25rem;
-    font-size: 0.49rem;
+    margin-bottom: 0.35rem;
+    color: rgba(32, 35, 31, 0.5);
+    font-size: 0.47rem;
     letter-spacing: 0.17em;
   }
 }
 
 @media (max-width: 390px) {
+  .property-hero-image {
+    height: 54svh;
+    min-height: 25rem;
+  }
+
   .property-hero-content {
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+    padding-right: 1.15rem;
+    padding-left: 1.15rem;
   }
 
   .property-hero-content h2 {
-    font-size: clamp(3.1rem, 13.5vw, 3.75rem);
+    font-size: clamp(3rem, 13.5vw, 3.75rem);
   }
 
   .hero-positioning {
-    font-size: 1.42rem;
+    font-size: 1.36rem;
+  }
+
+  .hero-details {
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
   }
 
   .hero-details p {
-    font-size: 0.85rem;
+    font-size: 0.84rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
