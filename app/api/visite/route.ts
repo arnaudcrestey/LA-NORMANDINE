@@ -375,11 +375,10 @@ export async function POST(request: NextRequest) {
                     </p>
 
                     <p>
-                      Votre demande de visite nous est bien parvenue.
-                      Nous allons en prendre connaissance et reviendrons vers
-                      vous prochainement afin d’échanger sur votre projet et
-                      de convenir, si possible, d’un rendez-vous.
-                    </p>
+  Nous avons bien reçu votre demande de visite.
+  Nous reviendrons vers vous prochainement afin d'échanger sur votre projet et,
+  si vous le souhaitez, de convenir ensemble d'un rendez-vous.
+</p>
 
                     <div style="
                       margin:30px 0;
@@ -394,15 +393,21 @@ export async function POST(request: NextRequest) {
                         font-size:21px;
                         line-height:1.4;
                       ">
-                        Chaque visite est organisée selon les disponibilités
-                        respectives.
+                        Chaque visite est organisée sur rendez-vous afin de vous faire découvrir La Normandine dans les meilleures conditions.
                       </p>
                     </div>
 
                     <p style="margin-bottom:0;">
   À bientôt,<br /><br />
+
   <strong>Arnaud Crestey</strong><br />
-  La Normandine
+
+  <a
+    href="https://normandine.arnaudcrestey.com"
+    style="color:#24372d;text-decoration:none;"
+  >
+    La Normandine
+  </a>
 </p>
                   </div>
 
