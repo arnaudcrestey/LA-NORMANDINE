@@ -232,28 +232,4 @@ export function VisitForm() {
       </p>
     </form>
   );
-}          placeholder="Présentez brièvement votre projet, vos questions et les périodes qui pourraient vous convenir."
-        />
-      </label>
-      <label className="honeypot" aria-hidden="true">
-        Site internet
-        <input name="website" tabIndex={-1} autoComplete="off" />
-      </label>
-      <label className="consent-row">
-        <input type="checkbox" name="consent" value="yes" required />
-        <span>
-          J’accepte que mes informations soient utilisées uniquement pour répondre à ma demande et organiser un éventuel échange. <b aria-hidden="true">*</b>
-        </span>
-      </label>
-      <div className="form-submit-row">
-        <button className="button button-copper" type="submit" disabled={status.type === "loading"}>
-          {status.type === "loading" ? "Transmission…" : "Envoyer ma demande"}
-        </button>
-        <p className="form-note">Les champs marqués d’un * sont obligatoires.</p>
-      </div>
-      <p className={`form-status ${status.type}`} role="status" aria-live="polite">
-        {status.message}
-      </p>
-    </form>
-  );
 }
