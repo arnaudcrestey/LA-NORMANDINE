@@ -307,17 +307,20 @@ export async function POST(request: NextRequest) {
         replyTo: recipient,
         subject: "Votre demande de visite — La Normandine",
         text: [
-          `Bonjour ${firstName},`,
-          "",
-          "Nous vous remercions pour votre intérêt pour La Normandine.",
-          "",
-          "Votre demande de visite a bien été reçue.",
-          "Nous allons en prendre connaissance et reviendrons vers vous prochainement afin d’échanger sur votre projet et de convenir, si possible, d’un rendez-vous.",
-          "",
-          "À bientôt,",
-          "La Normandine",
-          "Viessoix — Valdallière, Normandie",
-        ].join("\n"),
+  `Bonjour ${firstName},`,
+  "",
+  "Nous vous remercions pour votre intérêt pour La Normandine.",
+  "",
+  "Votre demande de visite a bien été reçue.",
+  "Nous allons en prendre connaissance et reviendrons vers vous prochainement afin d’échanger sur votre projet et de convenir, si possible, d’un rendez-vous.",
+  "",
+  "À bientôt,",
+  "",
+  "Arnaud Crestey",
+  "La Normandine",
+  "",
+  "Viessoix — Valdallière, Normandie",
+].join("\n"),
         html: `
           <!doctype html>
           <html lang="fr">
@@ -397,9 +400,10 @@ export async function POST(request: NextRequest) {
                     </div>
 
                     <p style="margin-bottom:0;">
-                      À bientôt,<br />
-                      <strong>La Normandine</strong>
-                    </p>
+  À bientôt,<br /><br />
+  <strong>Arnaud Crestey</strong><br />
+  La Normandine
+</p>
                   </div>
 
                   <div style="
