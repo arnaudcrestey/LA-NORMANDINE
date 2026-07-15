@@ -36,13 +36,6 @@ export default function VisitConfirmationPage() {
         <p className="visit-confirmation-lead">
           Nous avons bien reçu votre demande de visite pour La Normandine.
         </p>
-
-        <p className="visit-confirmation-text">
-          Nous allons en prendre connaissance et reviendrons vers vous
-          prochainement afin d’échanger sur votre projet et de convenir, si
-          possible, d’un rendez-vous.
-        </p>
-
         <div className="visit-confirmation-note">
           <span>Confirmation</span>
           <p>
@@ -52,7 +45,7 @@ export default function VisitConfirmationPage() {
         </div>
 
         <Link className="visit-confirmation-link" href="/">
-          Revenir à La Normandine
+          Retour à La Normandine
           <span aria-hidden="true">→</span>
         </Link>
       </section>
