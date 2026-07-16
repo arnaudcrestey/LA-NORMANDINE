@@ -17,7 +17,8 @@ const sans = Manrope({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://normandine.arnaudcrestey.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,33 +38,35 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    type: "website",
-    locale: "fr_FR",
-    url: "/",
-    siteName: "La Normandine",
-    title: "La Normandine — Une propriété, plusieurs vies possibles",
-    description:
-      "Deux maisons, des dépendances et environ deux hectares arborés à Viessoix — Valdallière, en Normandie.",
-    images: [
-      {
-        url: "/media/la-normandine-facade.jpg",
-        width: 1200,
-        height: 630,
-        alt: "La façade en pierre de La Normandine au milieu de son jardin.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "La Normandine — Propriété à vendre en Normandie",
-    description:
-      "Deux maisons, des dépendances et environ deux hectares arborés à Viessoix — Valdallière.",
-    images: ["/media/la-normandine-facade.jpg"],
-  },
-  icons: {
-    icon: "/icons/icon.png",
-    apple: "/icons/apple-icon.png",
-  },
+  type: "website",
+  locale: "fr_FR",
+  url: "/",
+  siteName: "La Normandine",
+  title: "La Normandine — Une propriété, plusieurs vies possibles",
+  description:
+    "Deux maisons, des dépendances et environ deux hectares arborés à Viessoix — Valdallière, en Normandie.",
+  images: [
+    {
+      url: "/opengraph-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "La Normandine, propriété à vendre en Normandie.",
+    },
+  ],
+},
+
+twitter: {
+  card: "summary_large_image",
+  title: "La Normandine — Une propriété, plusieurs vies possibles",
+  description:
+    "Deux maisons, des dépendances et environ deux hectares arborés à Viessoix — Valdallière, en Normandie.",
+  images: ["/opengraph-image.jpg"],
+},
+
+icons: {
+  icon: "/icons/icon.png",
+  apple: "/icons/apple-icon.png",
+},
 };
 
 export const viewport: Viewport = {
